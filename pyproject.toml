@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gec_attribute"
+version = "0.0.1"
+authors = [
+    {name = "Takumi Goto"},
+]
+description = "A library for the edit-level attribution for Grammatical Error Correction."
+license = {file = "LICENSE"}
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "transformers >= 4.39.0, ==4.*",
+    "torch >= 2.3.0, ==2.*",
+    "scipy >= 1.11.3, ==1.*",
+    "errant >= 3.0.0, ==3.*",
+    "lmppl",
+]
+
+[tool.setuptools.packages.find]
+include = ["gec_attribute*"]
+namespaces = false
